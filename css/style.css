@@ -32,6 +32,35 @@ html {
     margin-bottom: 93px; /*PC-186*/
 }
 
+/* ANIMATION TITLE*/
+
+@-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+
+/* ANIMATION TITLE*/
+
 .header span {
     font-size: 40px;
     color: #fff;
@@ -39,6 +68,8 @@ html {
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 31px;
+    -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 .header p {
@@ -59,6 +90,10 @@ html {
     width: 48px;
     height: 48px; 
     background-repeat: no-repeat;
+}
+
+.icon-arrow:hover {
+    zoom: 110%;
 }
 
 .main {
@@ -90,7 +125,7 @@ html {
 
 .services h2 {
     text-align: center;
-    font-size: 60px;
+    font-size: 40px;
     color: #464b4f;
     font-weight: 700;
     text-transform: uppercase;
