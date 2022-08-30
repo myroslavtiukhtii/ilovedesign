@@ -5,7 +5,7 @@ Home page of Product company website.
 ___
 
 #### :link: Live Demo: 
-[ilovedesign](https://github.com/myroslavchik/ilovedesign)
+[ilovedesign](https://myroslavchik.github.io/ilovedesign/)
 
 [Design](The Free Library)
 ___
