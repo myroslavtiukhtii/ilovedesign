@@ -13,8 +13,18 @@ html {
     padding: 0 15px;
 }
 
+.doodle {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
 .header {
+    position: relative;
     background-color: #23232e;
+    overflow: hidden;
 }
 .header .container {
     position: relative;
@@ -29,10 +39,185 @@ html {
 .header .logo {
     width: unset;
     height: 84px;
-    margin-bottom: 93px; /*PC-186*/
+    margin-bottom: 93px;
 }
 
-/* ANIMATION TITLE*/
+.header .header__title {
+    font-size: 40px;
+    color: #fff;
+    font-weight: 700px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 31px;
+    -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.header .header__text {
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+}
+
+.header .icon-arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    transform: translate(-50%);
+    display: flex;
+    background-image: url(../img/icon-arrow.png);
+    width: 48px;
+    height: 48px;
+    background-repeat: no-repeat;
+    transition: .3s ease-in-out;
+}
+
+
+.main {
+    background-image: url(../img/background-main.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.main .container {
+    padding: 62px 15px 0px;
+}
+
+
+.about p {
+    line-height: 1.4;
+    font-size: 20px;
+    max-width: 860px;
+    color: #464b4f;
+    text-align: justify;
+}
+
+.about p:not(:last-child) {
+    margin-bottom: 26px;
+}
+
+.services {
+    padding-bottom: 160px;
+}
+
+.services .services__title {
+    text-align: center;
+    font-size: 40px;
+    color: #464b4f;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    text-shadow: 2px 3px 7px white, 
+      0 10px 1px #464b4f80;
+}
+
+.services .services__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services .list__item {
+    max-width: 500px;
+}
+
+.services .list__item:not(:last-child) {
+    margin-bottom: 18px;
+}
+
+.services .item__title {
+    font-size: 18px;
+    color: #464b4f;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.services .item__text {
+    font-size: 14px;
+    color: #888a8b;
+    line-height: 1.6;
+}
+
+@media only screen and (min-width: 930px) {
+    
+    .header .container {
+        padding: 40px 30px 100px;
+    }
+
+    .header .logo {
+        width: 140px;
+        height: 140px;
+        margin-bottom: 180px;
+    }
+
+    .header .header__title {
+        font-size: 80px;
+        color: #fff;
+        margin-bottom: 44px;
+        font-weight: bold;
+    }
+
+    .header .header__text {
+        font-size: 25px;
+        line-height: 125%;
+        margin-bottom: 100px;
+    }
+
+    .header .icon-arrow {
+        margin-bottom: 19px;
+    }
+
+    .main .container {
+        padding: 120px 30px 120px;
+        max-width: 850px;
+    }
+
+    .about p {
+        line-height: 1.4;
+        font-size: 30px;
+    }
+
+    .about p:not(:last-child) {
+        margin-bottom: 52px;
+    }
+
+    .services .services__title {
+        font-size: 80px;
+        font-weight: bold;
+        margin-bottom: 100px;
+    }
+
+    .services .services__list {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .services .list__item {
+        margin-bottom: 18px;
+        margin-right: 35px;
+    }
+
+    .services .item__title {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 31px;
+    }
+
+    .services .item__text {
+        font-size: 19px;
+        line-height: 25px;
+    }
+}
+
+
+/*animations*/
+
 
 @-webkit-keyframes text-focus-in {
     0% {
@@ -59,194 +244,6 @@ html {
     }
   }
 
-/* ANIMATION TITLE*/
-
-.header span {
-    font-size: 40px;
-    color: #fff;
-    font-weight: 700px;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 31px;
-    -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-}
-
-.header p {
-    font-size: 18px;
-    color: #fff;
-    text-align: center;
-    line-height: 30px;
-
-}
-
-.header .icon-arrow {
-    position: absolute;
-    left: 50%;
-    bottom: 25px;
-    transform: translate(-50%);
-    display: flex;
-    background-image: url(../img/icon-arrow.png);
-    width: 48px;
-    height: 48px; 
-    background-repeat: no-repeat;
-}
-
-.icon-arrow:hover {
-    zoom: 110%;
-}
-
-.main {
-    background-image: url(../img/background-main.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.main .container {
-    padding: 62px 15px 60px;
-}
-
-.about {
-    margin-bottom: 60px;
-}
-
-.about p {
-    line-height: 1.4;
-    font-size: 24px;
-    max-width: 860px;
-    color: #464b4f;
-    text-align: center;
-}
-
-.about p:not(:last-child) {
-    margin-bottom: 26px;
-}
-
-.services h2 {
-    text-align: center;
-    font-size: 40px;
-    color: #464b4f;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 50px;
-}
-
-.services ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.services ul li {
-    max-width: 500px;
-}
-
-.services ul li:not(:last-child) {
-    margin-bottom: 18px;
-}
-
-.services ul li h3 {
-    font-size: 18px;
-    color: #464b4f;
-    font-weight: 700;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-}
-
-.services ul li p {
-    font-size: 14px;
-    color: #888a8b;
-    line-height: 1.6;
-}
-
-@media only screen and (min-width: 930px) {
-    
-    .header .container {
-        padding: 40px 30px 100px;
-    }
-
-    .header .logo {
-        width: 140px;
-        height: 140px;
-        margin-bottom: 180px;
-    }
-
-    .header span {
-        font-size: 80px;
-        color: #fff;
-        margin-bottom: 44px;
-        font-weight: bold;
-    }
-
-    .header p {
-        margin-bottom: 100px;
-    }
-
-    .header .icon-arrow {
-        margin-bottom: 19px;
-    }
-
-    .main .container {
-        padding: 120px 30px 120px;
-        max-width: 850px;
-    }
-
-    .about {
-        margin-bottom: 120px;
-    }
-
-    .about p {
-        line-height: 1.4;
-        font-size: 30px;
-    }
-
-    .about p:not(:last-child) {
-        margin-bottom: 52px;
-    }
-
-    .services h2 {
-        font-size: 80px;
-        font-weight: bold;
-        margin-bottom: 100px;
-    }
-
-    .services ul {
-        display: flex;
-        flex-direction: row;
-        align-items: stretch;
-    }
-
-    .services ul li {
-        margin-bottom: 18px;
-        margin-right: 35px;
-    }
-
-
-    .services ul li h3 {
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: 31px;
-    }
-
-    .services ul li p {
-        font-size: 14px;
-        line-height: 25px;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
 
 
     
